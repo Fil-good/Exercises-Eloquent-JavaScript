@@ -24,9 +24,9 @@ function reverseArrayInPlace(array) {
     temp_array[i] = array[index];
     console.log(`temp_array[${i}] = array[${index}]`);
     i +=1;
-    console.log(`array array iterative values after change: ${array}`);
+    console.log(`unchanged array after interation: ${array}`);
   }
   console.log(array);
   array = temp_array;
   console.log(array);
-} /* [ 5, 4, 3, 4, 5 ] */
+} /* [ 5, 4, 3, 2, 1 ] */
