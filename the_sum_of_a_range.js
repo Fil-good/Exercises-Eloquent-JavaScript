@@ -27,3 +27,14 @@ console.log(sum_of_values);
 
 array_to_sum = [1,2,3,4,5];
 sum(array_to_sum);
+
+function sum2(array) {
+  sum_of_values = 0;
+  array.forEach((element) => {
+    sum_of_values += element;
+  })
+  console.log(sum_of_values);
+}
+
+array_to_sum2 = [1,2,3,4,5,6];
+sum(array_to_sum2);
