@@ -25,5 +25,21 @@ function arrayToList(array) {
   return list;
 }
 
+/* The test for the arrayToList function*/
 let array_ex = [1,2,3];
-console.log(arrayToList(array_ex));
+// console.log(arrayToList(array_ex));
+
+
+function listToArray(list) {
+  console.log(`list: ${list}`)
+  let array = [];
+  for (let node = list; node; node = node.rest) {
+    array.push(node.value);
+    console.log(`node: ${node}`); console.log(`node.rest: ${node.rest}`);
+    console.log(`node.value: ${node.value}`);
+    console.log(`array iterations: ${array}`);
+  }
+  return array;
+}
+
+console.log(`calling function: ${listToArray(list)}`);

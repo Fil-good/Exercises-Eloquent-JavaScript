@@ -18,7 +18,7 @@ function range(start_value, end_value) {
 
 function sum(array) {
   sum_of_values = 0;
-  array.forEach(element => {
+  array.forEach(element => { /* FOREACH */
   sum_of_values += element;
 
 });
