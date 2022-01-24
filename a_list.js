@@ -18,13 +18,12 @@ let list = {
 // write a function arrayToList, when given argument [1,2,3]
 
 function arrayToList(array) {
-  list = {};
-  i = 0;
-  for(let index_array = 0; index_array < array.length ; index_array += 1) {
-    Object.assign(list, {value: array[i], rest: arrayToList(array[i+1]) })
-    console.log(`something strange: ${list}`)
-  }
+  let list = null;
+  for( let i = array.length-1; i>=0; i--)
+    list = {value: array[i], rest: list};
+  // console.log(list);
+  return list;
 }
 
-example: array = [1,2,3];
-arrayToList(array);
+let array_ex = [1,2,3];
+console.log(arrayToList(array_ex));
