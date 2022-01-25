@@ -35,11 +35,37 @@ function listToArray(list) {
   let array = [];
   for (let node = list; node; node = node.rest) {
     array.push(node.value);
-    console.log(`node: ${node}`); console.log(`node.rest: ${node.rest}`);
-    console.log(`node.value: ${node.value}`);
-    console.log(`array iterations: ${array}`);
+    // console.log(`node: ${node}`); console.log(`node.rest: ${node.rest}`);
+    // console.log(`node.value: ${node.value}`);
+    // console.log(`array iterations: ${array}`);
   }
   return array;
 }
-
 console.log(`calling function: ${listToArray(list)}`);
+
+
+console.log("-----------------------");
+
+function prepend(element, list) { /* add an element to the front of the list */
+    return {
+      value: element,
+      rest: list
+    };
+  }
+
+function nth(list, number) {
+  return listToArray(list)[number];
+}
+
+let number = 2;
+console.log(`nth: ${nth(list, number)}`);
+
+function nthRecursive(list, number) {
+  if (number === 0) {
+    return list.value;
+  } else if (list.rest === null) {
+    return undefined;
+  } else {
+    return nthRecursive(list.rest, number - 1);
+  }
+}
